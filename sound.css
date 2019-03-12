@@ -165,7 +165,7 @@ a {
     }
     
     p > span {
-      font-size: 48px;
+      font-size: 36px;
     }
     
     
@@ -192,6 +192,7 @@ a {
       height: 50px;
       line-height: 50px;
       transition: all 0.3s;
+      top: 30px;
       
      
     }
@@ -340,7 +341,7 @@ ABOUT CONTENT
 }
 
 .content{
-    padding: 1rem;
+    padding: 5rem;
     padding-top: 3rem;
 }
 
