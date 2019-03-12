@@ -15,6 +15,7 @@
 }
 
 body{
+  
     margin: 0;
     padding: 0;
     font-family:'Josefin Sans';
@@ -103,8 +104,8 @@ a {
     
     
     .bg{
-    
-      width: 400px;
+  z-index: -1;
+      width: 100%;
       right: 0;
      
     }
@@ -148,9 +149,9 @@ a {
     ***********************************/
     
     main {
-    padding: 1.5rem;
       margin-top: 6px;
       width: 100%;
+      height: 100vh;
     
       
     }
@@ -158,14 +159,10 @@ a {
    
   
     
-    p {
-      color: #fbfbfb;
-      font-size: 12px;
-      font-family: 'Josefin Sans';
-    }
+ 
     
     p > span {
-      font-size: 36px;
+      font-size: 24px;
     }
     
     
@@ -237,19 +234,11 @@ a {
     
     img{
      max-width: 100%;
-     padding-top: 1rem;
-     padding-bottom: 1rem;
-    }
-    .container{
-      width: 100%;
-      height: 100%;
+     padding: 2rem;
+    
     }
     
     .content{
-      padding-right: 15px;
-      padding-left: 15px;
-     position: relative;
-     bottom: 2rem;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -265,9 +254,10 @@ GENERAL STYLIINGS
 ******************************************/
 
 p{
-    color: white;
+    color: #fafafa;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 12px;
+    line-height: 1.5;
 
 }
 
@@ -283,7 +273,7 @@ ABOUT CONTENT (mobile)
   background-color: #cd640d;
   flex-direction: column;
   align-items: flex-start;
-  
+  height: 100vh;  
   
   }
 }
@@ -313,6 +303,7 @@ ABOUT CONTENT (Desktop)
   .Main-img{
     grid-area: img;
       background-color: #3a5258;
+    
       
      
      
@@ -322,6 +313,7 @@ ABOUT CONTENT (Desktop)
 
   
   .content{
+   
       grid-area: info;
   }
 }
@@ -337,12 +329,13 @@ ABOUT CONTENT
     align-items: center; 
     background-color: #3a5258;
     width: 100%;
+    height: 100vh;
    
 }
 
 .content{
-    padding: 5rem;
-    padding-top: 3rem;
+  padding: 3rem;
+  
 }
 
 .sound{
