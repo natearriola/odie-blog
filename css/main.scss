@@ -1,0 +1,248 @@
+$colors: (
+  primary: #7db9d1,
+  secondary: #1f1f1f,
+  accent: #fff7f0,
+  accent2: #bf5c06,
+  cta: #f5a75d
+);
+
+/******************** 
+Responsive Media Queries 
+********/
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+/*************
+FONTS 
+*/
+@import url("https://fonts.googleapis.com/css?family=Anton|Roboto:400,500|Shadows+Into+Light");
+@import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto";
+  width: 100%;
+  height: 100vh;
+  margin: 0 !important;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  height: 70px;
+
+  background-color: map-get($colors, primary);
+  .navbar {
+    width: 100%;
+    display: flex;
+    padding-right: 20px;
+    align-items: center;
+    height: 70px;
+
+    @include for-tablet-landscape-up {
+      padding-right: 50px;
+    }
+    .logo {
+      flex-grow: 1;
+      padding-left: 20px;
+
+      a {
+        font-family: "IBM Plex Sans";
+        color: transparent;
+        -webkit-text-stroke: 1px map-get($colors, accent);
+        letter-spacing: 3px;
+        font-size: 24px;
+        text-decoration: none;
+      }
+    }
+    .main-nav {
+      display: flex;
+      list-style-type: none;
+    }
+
+    .main-nav li {
+      letter-spacing: 1px;
+      font-size: 16px;
+      text-align: center;
+      margin: 0 0 0px 15px;
+      text-transform: uppercase;
+      @include for-tablet-landscape-up {
+        font-size: 24px;
+        margin: 0 0 0px 25px;
+      }
+    }
+
+    .nav-links {
+      color: map-get($colors, secondary);
+      font-family: "Shadows into light";
+      position: relative;
+      text-decoration: none;
+    }
+
+    .nav-links:hover {
+      color: map-get($colors, secondary);
+    }
+
+    .nav-links:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: map-get($colors, accent);
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    .nav-links:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+}
+
+main {
+  margin-top: 70px;
+  background-color: map-get($colors, secondary);
+
+  .mainImg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 400px;
+      max-width: 100%;
+      padding: 1rem;
+      @include for-desktop-up {
+        height: 600px;
+      }
+    }
+  }
+
+  .mainContent {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    h1 {
+      font-family: "Shadows into light";
+      font-size: 48px;
+
+      color: map-get($colors, primary);
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 200%;
+      color: map-get($colors, accent);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem;
+      @include for-desktop-up {
+        font-size: 18px;
+      }
+      @include for-big-desktop-up {
+        font-size: 24px;
+      }
+    }
+
+    .author {
+      font-family: "Anton";
+      padding-bottom: 0;
+      letter-spacing: 1px;
+      font-size: 18px;
+      color: map-get($colors, accent2);
+    }
+
+    p:nth-child(3) {
+      border-top: 1px solid rgba(244, 244, 244, 0.7);
+      width: 70%;
+      font-family: "saattlische";
+      color: map-get($colors, accent);
+      text-align: left;
+    }
+
+    a {
+      margin-top: 30px;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: map-get($colors, secondary);
+      font-family: "Shadows into light";
+      padding: 20px 50px 20px 50px;
+      border-radius: 5px;
+      display: inline-block;
+      border: none;
+      background-color: map-get($colors, cta);
+      &:hover {
+        letter-spacing: 1px;
+        background-color: map-get($colors, accent);
+
+        box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+        transition: all 0.4s ease 0s;
+      }
+    }
+  }
+}
+footer {
+  width: 100%;
+  background-color: map-get($colors, primary);
+  text-align: center;
+
+  .copy {
+    color: map-get($colors, secondary);
+    font-family: "Shadows into light";
+    font-size: 16px;
+    a {
+      color: map-get($colors, secondary);
+      font-family: "saatlische";
+    }
+  }
+  .socials {
+    font-size: 36px;
+    color: map-get($colors, accent);
+    padding: 1rem;
+    i {
+      padding-right: 20px;
+    }
+  }
+}
