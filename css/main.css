@@ -214,6 +214,7 @@ main .mainContent .author {
   padding-bottom: 0;
   letter-spacing: 2px;
   font-size: 12px;
+  text-align: center;
   color: #bf5c06;
 }
 
@@ -221,14 +222,12 @@ main .mainContent .author {
   main .mainContent .author {
     font-size: 18px;
     letter-spacing: 2px;
-    text-align: center;
   }
 }
 
 main .mainContent p:nth-child(3) {
   margin-left: auto;
   margin-right: auto;
-  border-top: 1px solid rgba(244, 244, 244, 0.7);
   width: 100%;
   font-family: "saattlische";
   color: #fff7f0;
