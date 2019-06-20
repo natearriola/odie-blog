@@ -135,14 +135,14 @@ main .mainImg {
 }
 
 main .mainImg img {
-  height: 400px;
+  height: 300px;
   max-width: 100%;
   padding: 1rem;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   main .mainImg img {
-    height: 600px;
+    height: auto;
   }
 }
 
@@ -158,53 +158,87 @@ main .mainContent {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
 }
 
 main .mainContent h1 {
-  font-family: "Shadows into light";
-  font-size: 48px;
+  font-family: "IBM plex sans";
+  font-size: 24px;
   color: #7db9d1;
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
+  padding: 1rem;
+}
+
+@media (min-width: 900px) {
+  main .mainContent h1 {
+    font-size: 48px;
+  }
 }
 
 main .mainContent p {
   font-size: 16px;
   line-height: 200%;
   color: #fff7f0;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   padding: 1rem;
 }
 
 @media (min-width: 1200px) {
   main .mainContent p {
-    font-size: 18px;
+    padding: 1rem 2rem 2rem 0;
+    font-size: 24px;
   }
 }
 
 @media (min-width: 1800px) {
   main .mainContent p {
-    font-size: 24px;
+    font-size: 36px;
+  }
+}
+
+main .mainContent p span {
+  font-size: 24px;
+  color: #7db9d1;
+}
+
+@media (min-width: 1200px) {
+  main .mainContent p span {
+    font-size: 48px;
   }
 }
 
 main .mainContent .author {
-  font-family: "Anton";
+  font-family: "shadows into light";
   padding-bottom: 0;
-  letter-spacing: 1px;
-  font-size: 18px;
+  letter-spacing: 2px;
+  font-size: 12px;
   color: #bf5c06;
 }
 
+@media (min-width: 900px) {
+  main .mainContent .author {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+}
+
 main .mainContent p:nth-child(3) {
+  margin-left: auto;
+  margin-right: auto;
   border-top: 1px solid rgba(244, 244, 244, 0.7);
-  width: 70%;
+  width: 100%;
   font-family: "saattlische";
   color: #fff7f0;
   text-align: left;
+}
+
+@media (min-width: 1200px) {
+  main .mainContent p:nth-child(3) {
+    width: 80%;
+  }
 }
 
 main .mainContent a {
